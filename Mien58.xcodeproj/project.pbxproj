@@ -6,15 +6,47 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8C483E951F6E77FF00897F1E /* dnn_face_recognition_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CE92B651F6D753900913863 /* dnn_face_recognition_ex.cpp */; };
+		8C483E971F6E784100897F1E /* libdlib.19.4.99.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C483E961F6E784100897F1E /* libdlib.19.4.99.dylib */; };
+		8C483E981F6E81DC00897F1E /* libMien58.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C483E911F6E77C800897F1E /* libMien58.dylib */; };
+		8CE92B711F6D7C0C00913863 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CE92B701F6D7C0C00913863 /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8CE92B6C1F6D7C0C00913863 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		8CE92B5D1F6D747700913863 /* libMien58.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libMien58.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C483E911F6E77C800897F1E /* libMien58.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libMien58.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C483E961F6E784100897F1E /* libdlib.19.4.99.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdlib.19.4.99.dylib; path = "../../Library/Developer/Xcode/DerivedData/Work-epbhlotwgnuranenxjltsehfharg/Build/Products/Debug/libdlib.19.4.99.dylib"; sourceTree = "<group>"; };
+		8CE92B651F6D753900913863 /* dnn_face_recognition_ex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dnn_face_recognition_ex.cpp; sourceTree = "<group>"; };
+		8CE92B6E1F6D7C0C00913863 /* appMien58 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = appMien58; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CE92B701F6D7C0C00913863 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8CE92B5A1F6D747700913863 /* Frameworks */ = {
+		8C483E8E1F6E77C800897F1E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C483E971F6E784100897F1E /* libdlib.19.4.99.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CE92B6B1F6D7C0C00913863 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C483E981F6E81DC00897F1E /* libMien58.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -24,22 +56,50 @@
 		8CE92B541F6D747700913863 = {
 			isa = PBXGroup;
 			children = (
+				8CE92B641F6D753900913863 /* Mien58 */,
+				8CE92B6F1F6D7C0C00913863 /* appMien58 */,
 				8CE92B5E1F6D747700913863 /* Products */,
+				8CE92B671F6D7BB000913863 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		8CE92B5E1F6D747700913863 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8CE92B5D1F6D747700913863 /* libMien58.dylib */,
+				8CE92B6E1F6D7C0C00913863 /* appMien58 */,
+				8C483E911F6E77C800897F1E /* libMien58.dylib */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8CE92B641F6D753900913863 /* Mien58 */ = {
+			isa = PBXGroup;
+			children = (
+				8CE92B651F6D753900913863 /* dnn_face_recognition_ex.cpp */,
+			);
+			path = Mien58;
+			sourceTree = "<group>";
+		};
+		8CE92B671F6D7BB000913863 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C483E961F6E784100897F1E /* libdlib.19.4.99.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CE92B6F1F6D7C0C00913863 /* appMien58 */ = {
+			isa = PBXGroup;
+			children = (
+				8CE92B701F6D7C0C00913863 /* main.cpp */,
+			);
+			path = appMien58;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8CE92B5B1F6D747700913863 /* Headers */ = {
+		8C483E8F1F6E77C800897F1E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,13 +109,13 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8CE92B5C1F6D747700913863 /* Mien58 */ = {
+		8C483E901F6E77C800897F1E /* Mien58 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8CE92B611F6D747700913863 /* Build configuration list for PBXNativeTarget "Mien58" */;
+			buildConfigurationList = 8C483E921F6E77C800897F1E /* Build configuration list for PBXNativeTarget "Mien58" */;
 			buildPhases = (
-				8CE92B591F6D747700913863 /* Sources */,
-				8CE92B5A1F6D747700913863 /* Frameworks */,
-				8CE92B5B1F6D747700913863 /* Headers */,
+				8C483E8D1F6E77C800897F1E /* Sources */,
+				8C483E8E1F6E77C800897F1E /* Frameworks */,
+				8C483E8F1F6E77C800897F1E /* Headers */,
 			);
 			buildRules = (
 			);
@@ -63,8 +123,25 @@
 			);
 			name = Mien58;
 			productName = Mien58;
-			productReference = 8CE92B5D1F6D747700913863 /* libMien58.dylib */;
+			productReference = 8C483E911F6E77C800897F1E /* libMien58.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
+		};
+		8CE92B6D1F6D7C0C00913863 /* appMien58 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CE92B721F6D7C0C00913863 /* Build configuration list for PBXNativeTarget "appMien58" */;
+			buildPhases = (
+				8CE92B6A1F6D7C0C00913863 /* Sources */,
+				8CE92B6B1F6D7C0C00913863 /* Frameworks */,
+				8CE92B6C1F6D7C0C00913863 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = appMien58;
+			productName = appMien58;
+			productReference = 8CE92B6E1F6D7C0C00913863 /* appMien58 */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -75,7 +152,11 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "___ZHONGSIFEN___";
 				TargetAttributes = {
-					8CE92B5C1F6D747700913863 = {
+					8C483E901F6E77C800897F1E = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					8CE92B6D1F6D7C0C00913863 = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
 					};
@@ -93,22 +174,52 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8CE92B5C1F6D747700913863 /* Mien58 */,
+				8CE92B6D1F6D7C0C00913863 /* appMien58 */,
+				8C483E901F6E77C800897F1E /* Mien58 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8CE92B591F6D747700913863 /* Sources */ = {
+		8C483E8D1F6E77C800897F1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C483E951F6E77FF00897F1E /* dnn_face_recognition_ex.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CE92B6A1F6D7C0C00913863 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CE92B711F6D7C0C00913863 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		8C483E931F6E77C800897F1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8C483E941F6E77C800897F1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		8CE92B5F1F6D747700913863 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -150,6 +261,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -192,28 +305,28 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		8CE92B621F6D747700913863 /* Debug */ = {
+		8CE92B731F6D7C0C00913863 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		8CE92B631F6D747700913863 /* Release */ = {
+		8CE92B741F6D7C0C00913863 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -221,6 +334,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8C483E921F6E77C800897F1E /* Build configuration list for PBXNativeTarget "Mien58" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C483E931F6E77C800897F1E /* Debug */,
+				8C483E941F6E77C800897F1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		8CE92B581F6D747700913863 /* Build configuration list for PBXProject "Mien58" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -230,13 +351,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8CE92B611F6D747700913863 /* Build configuration list for PBXNativeTarget "Mien58" */ = {
+		8CE92B721F6D7C0C00913863 /* Build configuration list for PBXNativeTarget "appMien58" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8CE92B621F6D747700913863 /* Debug */,
-				8CE92B631F6D747700913863 /* Release */,
+				8CE92B731F6D7C0C00913863 /* Debug */,
+				8CE92B741F6D7C0C00913863 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
