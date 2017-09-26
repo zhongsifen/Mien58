@@ -37,7 +37,7 @@
     2011.  SSE4 is the next fastest and is supported by most current machines.  
 */
 
-
+#include "Mien58.hpp"
 #include <dlib/image_processing/frontal_face_detector.h>
 #include <dlib/image_processing/render_face_detections.h>
 #include <dlib/image_processing.h>
@@ -49,21 +49,32 @@ using namespace dlib;
 using namespace std;
 
 // ----------------------------------------------------------------------------------------
-
-const char* argv[] = {
-	"landmark",
-	"/Users/zhongsifen/Work/dlib/data/shape_predictor_68_face_landmarks.dat",
-	"/Users/zhongsifen/Work/data/cert/cert/1.jpg",
-	"/Users/zhongsifen/Work/data/cert/cert/2.jpg",
-	"/Users/zhongsifen/Work/data/cert/cert/3.jpg",
-	"/Users/zhongsifen/Work/data/cert/cert/4.jpg",
-	"/Users/zhongsifen/Work/data/cert/cert/5.jpg",
-	"/Users/zhongsifen/Work/data/cert/cert/6.jpg",
-	"/Users/zhongsifen/Work/data/cert/cert/7.jpg",
-	"/Users/zhongsifen/Work/data/cert/cert/8.jpg",
+namespace landmark {
+	const char* argv[] = {
+		"landmark",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-53-21-45.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-53-28-46.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-53-31-47.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-53-38-48.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-53-38-49.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-53-44-50.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-53-55-51.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-53-55-52.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-54-00-53.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-54-00-54.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-54-04-55.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-54-05-56.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-54-05-57.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-54-07-58.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-54-08-59.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-54-14-60.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-54-14-61.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-54-23-62.jpeg",
+		"/Users/zhongsifen/Work/Cert58/img/ZXY/2017-08-30-16-54-23-63.jpeg",
+	};
+	const int argc = 20;
 };
-const int argc = 10;
-
+using namespace landmark;
 int main_landmark(int _argc, char** _argv)
 {  
     try
@@ -89,18 +100,18 @@ int main_landmark(int _argc, char** _argv)
         // loading the model from the shape_predictor_68_face_landmarks.dat file you gave
         // as a command line argument.
         shape_predictor sp;
-        deserialize(argv[1]) >> sp;
+        deserialize(_DAT_SP) >> sp;
 
 
         image_window win, win_faces;
         // Loop over all the images provided on the command line.
-        for (int i = 2; i < argc; ++i)
+        for (int i = 1; i < argc; ++i)
         {
             cout << "processing image " << argv[i] << endl;
             array2d<rgb_pixel> img;
             load_image(img, argv[i]);
             // Make the image larger so we can detect small faces.
-            pyramid_up(img);
+//            pyramid_up(img);
 
             // Now tell the face detector to give us a list of bounding boxes
             // around all the faces in the image.

@@ -46,8 +46,22 @@ using namespace dlib;
 using namespace std;
 
 // ----------------------------------------------------------------------------------------
-
-int main_detect(int argc, char** argv)
+namespace detect {
+const char* argv[] = {
+	"detect",
+	"/Users/zhongsifen/Work/data/cert/cert/1.jpg",
+	"/Users/zhongsifen/Work/data/cert/cert/2.jpg",
+	"/Users/zhongsifen/Work/data/cert/cert/3.jpg",
+	"/Users/zhongsifen/Work/data/cert/cert/4.jpg",
+	"/Users/zhongsifen/Work/data/cert/cert/5.jpg",
+	"/Users/zhongsifen/Work/data/cert/cert/6.jpg",
+	"/Users/zhongsifen/Work/data/cert/cert/7.jpg",
+	"/Users/zhongsifen/Work/data/cert/cert/8.jpg",
+};
+const int argc = 9;
+}
+using namespace detect;
+int main_detect(int _argc, char** _argv)
 {  
     try
     {
@@ -88,8 +102,9 @@ int main_detect(int argc, char** argv)
             win.set_image(img);
             win.add_overlay(dets, rgb_pixel(255,0,0));
 
-            cout << "Hit enter to process the next image..." << endl;
-            cin.get();
+//            cout << "Hit enter to process the next image..." << endl;
+//            cin.get();
+			dlib::sleep(1000);
         }
     }
     catch (exception& e)

@@ -19,6 +19,7 @@
     dnn_metric_learning_on_images_ex.cpp examples.
 */
 
+#include "Mien58.hpp"
 #include <dlib/gui_widgets.h>
 #include <dlib/clustering.h>
 #include <dlib/string.h>
@@ -78,7 +79,22 @@ std::vector<matrix<rgb_pixel>> jitter_image(
 
 // ----------------------------------------------------------------------------------------
 
-int main_recogn(int argc, const char* argv[])
+namespace recogn {
+	const char* argv[] = {
+		"detect",
+		"/Users/zhongsifen/Work/data/cert/cert/1.jpg",
+//		"/Users/zhongsifen/Work/data/cert/cert/2.jpg",
+//		"/Users/zhongsifen/Work/data/cert/cert/3.jpg",
+//		"/Users/zhongsifen/Work/data/cert/cert/4.jpg",
+//		"/Users/zhongsifen/Work/data/cert/cert/5.jpg",
+//		"/Users/zhongsifen/Work/data/cert/cert/6.jpg",
+//		"/Users/zhongsifen/Work/data/cert/cert/7.jpg",
+//		"/Users/zhongsifen/Work/data/cert/cert/8.jpg",
+	};
+	const int argc = 2;
+}
+using namespace recogn;
+int main_recogn(int _argc, char** _argv)
 {
     if (argc != 2)
     {
@@ -98,10 +114,10 @@ int main_recogn(int argc, const char* argv[])
     frontal_face_detector detector = get_frontal_face_detector();
     // We will also use a face landmarking model to align faces to a standard pose:  (see face_landmark_detection_ex.cpp for an introduction)
     shape_predictor sp;
-    deserialize("shape_predictor_68_face_landmarks.dat") >> sp;
+	deserialize(_DAT_SP) >> sp;
     // And finally we load the DNN responsible for face recognition.
     anet_type net;
-    deserialize("dlib_face_recognition_resnet_model_v1.dat") >> net;
+	deserialize(_DAT_NET) >> net;
 
     matrix<rgb_pixel> img;
     load_image(img, argv[1]);
@@ -190,8 +206,9 @@ int main_recogn(int argc, const char* argv[])
     // procedure a little more accurate but makes face descriptor calculation slower.
 
 
-    cout << "hit enter to terminate" << endl;
-    cin.get();
+//    cout << "hit enter to terminate" << endl;
+//    cin.get();
+	dlib::sleep(1000);
 	
 	return 0;
 }
