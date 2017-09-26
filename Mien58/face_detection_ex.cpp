@@ -47,7 +47,7 @@ using namespace std;
 
 // ----------------------------------------------------------------------------------------
 
-int main(int argc, char** argv)
+int main_detect(int argc, char** argv)
 {  
     try
     {
@@ -97,6 +97,8 @@ int main(int argc, char** argv)
         cout << "\nexception thrown!" << endl;
         cout << e.what() << endl;
     }
+	
+	return 0;
 }
 
 // ----------------------------------------------------------------------------------------

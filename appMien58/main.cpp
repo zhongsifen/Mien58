@@ -8,9 +8,9 @@
 
 #include <iostream>
 
-int main_mien(int argc, const char* argv[]);
-int main(int argc, const char * argv[]) {
-	int ret = main_mien(argc, argv);
+int main_landmark(int _argc, char** _argv);
+int main(int argc, char** argv) {
+	int ret = main_landmark(argc, argv);
 	std::cout << "Hello, World!\n";
 	return ret;
 }

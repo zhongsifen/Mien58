@@ -50,7 +50,21 @@ using namespace std;
 
 // ----------------------------------------------------------------------------------------
 
-int main(int argc, char** argv)
+const char* argv[] = {
+	"landmark",
+	"/Users/zhongsifen/Work/dlib/data/shape_predictor_68_face_landmarks.dat",
+	"/Users/zhongsifen/Work/data/cert/cert/1.jpg",
+	"/Users/zhongsifen/Work/data/cert/cert/2.jpg",
+	"/Users/zhongsifen/Work/data/cert/cert/3.jpg",
+	"/Users/zhongsifen/Work/data/cert/cert/4.jpg",
+	"/Users/zhongsifen/Work/data/cert/cert/5.jpg",
+	"/Users/zhongsifen/Work/data/cert/cert/6.jpg",
+	"/Users/zhongsifen/Work/data/cert/cert/7.jpg",
+	"/Users/zhongsifen/Work/data/cert/cert/8.jpg",
+};
+const int argc = 10;
+
+int main_landmark(int _argc, char** _argv)
 {  
     try
     {
@@ -119,8 +133,9 @@ int main(int argc, char** argv)
             extract_image_chips(img, get_face_chip_details(shapes), face_chips);
             win_faces.set_image(tile_images(face_chips));
 
-            cout << "Hit enter to process the next image..." << endl;
-            cin.get();
+//            cout << "Hit enter to process the next image..." << endl;
+//            cin.get();
+			dlib::sleep(1000);
         }
     }
     catch (exception& e)
@@ -128,6 +143,8 @@ int main(int argc, char** argv)
         cout << "\nexception thrown!" << endl;
         cout << e.what() << endl;
     }
+	
+	return 0;
 }
 
 // ----------------------------------------------------------------------------------------

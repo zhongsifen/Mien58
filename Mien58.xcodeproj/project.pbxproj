@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C2FB75E1F795A2F000B332B /* face_landmark_detection_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FB75C1F795A2F000B332B /* face_landmark_detection_ex.cpp */; };
+		8C2FB75F1F795A2F000B332B /* face_detection_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FB75D1F795A2F000B332B /* face_detection_ex.cpp */; };
 		8C483E951F6E77FF00897F1E /* dnn_face_recognition_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CE92B651F6D753900913863 /* dnn_face_recognition_ex.cpp */; };
-		8C483E971F6E784100897F1E /* libdlib.19.4.99.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C483E961F6E784100897F1E /* libdlib.19.4.99.dylib */; };
 		8C483E981F6E81DC00897F1E /* libMien58.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C483E911F6E77C800897F1E /* libMien58.dylib */; };
 		8CE92B711F6D7C0C00913863 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CE92B701F6D7C0C00913863 /* main.cpp */; };
+		8CF23D4A1F796EA900DFD5FB /* libdlib.19.7.99.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF23D4B1F796EA900DFD5FB /* libdlib.19.7.99.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,11 +28,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8C2FB75C1F795A2F000B332B /* face_landmark_detection_ex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = face_landmark_detection_ex.cpp; sourceTree = "<group>"; };
+		8C2FB75D1F795A2F000B332B /* face_detection_ex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = face_detection_ex.cpp; sourceTree = "<group>"; };
 		8C483E911F6E77C800897F1E /* libMien58.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libMien58.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C483E961F6E784100897F1E /* libdlib.19.4.99.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdlib.19.4.99.dylib; path = "../../Library/Developer/Xcode/DerivedData/Work-epbhlotwgnuranenxjltsehfharg/Build/Products/Debug/libdlib.19.4.99.dylib"; sourceTree = "<group>"; };
 		8CE92B651F6D753900913863 /* dnn_face_recognition_ex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dnn_face_recognition_ex.cpp; sourceTree = "<group>"; };
 		8CE92B6E1F6D7C0C00913863 /* appMien58 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = appMien58; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CE92B701F6D7C0C00913863 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8CF23D4B1F796EA900DFD5FB /* libdlib.19.7.99.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libdlib.19.7.99.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C483E971F6E784100897F1E /* libdlib.19.4.99.dylib in Frameworks */,
+				8CF23D4A1F796EA900DFD5FB /* libdlib.19.7.99.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				8CE92B651F6D753900913863 /* dnn_face_recognition_ex.cpp */,
+				8C2FB75D1F795A2F000B332B /* face_detection_ex.cpp */,
+				8C2FB75C1F795A2F000B332B /* face_landmark_detection_ex.cpp */,
 			);
 			path = Mien58;
 			sourceTree = "<group>";
@@ -83,6 +90,7 @@
 		8CE92B671F6D7BB000913863 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CF23D4B1F796EA900DFD5FB /* libdlib.19.7.99.dylib */,
 				8C483E961F6E784100897F1E /* libdlib.19.4.99.dylib */,
 			);
 			name = Frameworks;
@@ -186,6 +194,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C483E951F6E77FF00897F1E /* dnn_face_recognition_ex.cpp in Sources */,
+				8C2FB75F1F795A2F000B332B /* face_detection_ex.cpp in Sources */,
+				8C2FB75E1F795A2F000B332B /* face_landmark_detection_ex.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +351,7 @@
 				8C483E941F6E77C800897F1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CE92B581F6D747700913863 /* Build configuration list for PBXProject "Mien58" */ = {
 			isa = XCConfigurationList;
