@@ -26,7 +26,8 @@
     instructions.  Note that AVX is the fastest but requires a CPU from at least
     2011.  SSE4 is the next fastest and is supported by most current machines.  
 */
-
+#include "Mien58.hpp"
+#include "../wdlib/wdlib/wdlib.hpp"
 #include <dlib/opencv.h>
 #include <opencv2/highgui/highgui.hpp>
 #include <dlib/image_processing/frontal_face_detector.h>
@@ -37,7 +38,7 @@
 using namespace dlib;
 using namespace std;
 
-int main_webcam()
+int main_webcam(int _argc, char** _argv)
 {
     try
     {
@@ -70,18 +71,19 @@ int main_webcam()
             // to reallocate the memory which stores the image as that will make cimg
             // contain dangling pointers.  This basically means you shouldn't modify temp
             // while using cimg.
-            cv_image<bgr_pixel> cimg(temp);
+            cv_image<bgr_pixel> cvimg;
+			wdlib::tdlib(temp, cvimg);
 
             // Detect faces 
-            std::vector<rectangle> faces = detector(cimg);
+            std::vector<rectangle> faces = detector(cvimg);
             // Find the pose of each face.
             std::vector<full_object_detection> shapes;
             for (unsigned long i = 0; i < faces.size(); ++i)
-                shapes.push_back(pose_model(cimg, faces[i]));
+                shapes.push_back(pose_model(cvimg, faces[i]));
 
             // Display it all on the screen
             win.clear_overlay();
-            win.set_image(cimg);
+            win.set_image(cvimg);
             win.add_overlay(render_face_detections(shapes));
         }
     }

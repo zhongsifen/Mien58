@@ -8,12 +8,12 @@
 
 #include <iostream>
 
-int main_webcam();
+int main_webcam(int _argc, char** _argv);
 int main_detect(int _argc, char** _argv);
 int main_landmark(int _argc, char** _argv);
 int main_recogn(int _argc, char** _argv);
 int main(int argc, char** argv) {
-	int ret = main_webcam();
+	int ret = main_webcam(argc, argv);
 	std::cout << "Hello, World!\n";
 	return ret;
 }

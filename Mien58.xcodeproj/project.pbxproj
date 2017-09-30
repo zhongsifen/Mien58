@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C2FB75E1F795A2F000B332B /* face_landmark_detection_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FB75C1F795A2F000B332B /* face_landmark_detection_ex.cpp */; };
-		8C2FB75F1F795A2F000B332B /* face_detection_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FB75D1F795A2F000B332B /* face_detection_ex.cpp */; };
 		8C483E981F6E81DC00897F1E /* libMien58.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C483E911F6E77C800897F1E /* libMien58.dylib */; };
 		8C9AB72A1F7A402900E32BD3 /* Mien58.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C9AB7281F7A402900E32BD3 /* Mien58.cpp */; };
 		8C9AB72B1F7A402900E32BD3 /* Mien58.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8C9AB7291F7A402900E32BD3 /* Mien58.hpp */; };
-		8CBCBC531F7D1C9300A598DE /* webcam_face_pose_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCBC521F7D1C9200A598DE /* webcam_face_pose_ex.cpp */; };
+		8CAB3AF51F7F67FB009E63D3 /* webcam_face_pose_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCBC521F7D1C9200A598DE /* webcam_face_pose_ex.cpp */; };
+		8CAB3AF61F7F6803009E63D3 /* face_detection_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FB75D1F795A2F000B332B /* face_detection_ex.cpp */; };
+		8CAB3AF71F7F6803009E63D3 /* face_landmark_detection_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FB75C1F795A2F000B332B /* face_landmark_detection_ex.cpp */; };
+		8CAB3AF81F7F6AE6009E63D3 /* libopencv_core.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBCBC591F7D1DE300A598DE /* libopencv_core.3.3.0.dylib */; };
+		8CAB3AF91F7F6AE6009E63D3 /* libopencv_highgui.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBCBC551F7D1D0600A598DE /* libopencv_highgui.3.3.0.dylib */; };
+		8CAB3AFB1F7F6AE7009E63D3 /* libopencv_imgproc.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAB3AFA1F7F6AE7009E63D3 /* libopencv_imgproc.3.3.0.dylib */; };
+		8CAB3AFC1F7F6B12009E63D3 /* libdlib.19.7.99.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF23D4B1F796EA900DFD5FB /* libdlib.19.7.99.dylib */; };
+		8CAB3AFE1F7F6BFA009E63D3 /* libopencv_videoio.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBCBC571F7D1D8900A598DE /* libopencv_videoio.3.3.0.dylib */; };
 		8CBCBC541F7D1CB600A598DE /* libdlib.19.7.99.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF23D4B1F796EA900DFD5FB /* libdlib.19.7.99.dylib */; };
 		8CBCBC561F7D1D0600A598DE /* libopencv_highgui.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBCBC551F7D1D0600A598DE /* libopencv_highgui.3.3.0.dylib */; };
 		8CBCBC581F7D1D8900A598DE /* libopencv_videoio.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBCBC571F7D1D8900A598DE /* libopencv_videoio.3.3.0.dylib */; };
@@ -39,6 +44,8 @@
 		8C483E961F6E784100897F1E /* libdlib.19.4.99.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdlib.19.4.99.dylib; path = "../../Library/Developer/Xcode/DerivedData/Work-epbhlotwgnuranenxjltsehfharg/Build/Products/Debug/libdlib.19.4.99.dylib"; sourceTree = "<group>"; };
 		8C9AB7281F7A402900E32BD3 /* Mien58.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mien58.cpp; sourceTree = "<group>"; };
 		8C9AB7291F7A402900E32BD3 /* Mien58.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Mien58.hpp; sourceTree = "<group>"; };
+		8CAB3AF11F7F2D57009E63D3 /* libwdlib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwdlib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CAB3AFA1F7F6AE7009E63D3 /* libopencv_imgproc.3.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.3.3.0.dylib; path = ../../lib/libopencv_imgproc.3.3.0.dylib; sourceTree = "<group>"; };
 		8CBCBC511F7D1C7200A598DE /* libdlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libdlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CBCBC521F7D1C9200A598DE /* webcam_face_pose_ex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = webcam_face_pose_ex.cpp; sourceTree = "<group>"; };
 		8CBCBC551F7D1D0600A598DE /* libopencv_highgui.3.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.3.3.0.dylib; path = ../../lib/libopencv_highgui.3.3.0.dylib; sourceTree = "<group>"; };
@@ -65,6 +72,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CAB3AFE1F7F6BFA009E63D3 /* libopencv_videoio.3.3.0.dylib in Frameworks */,
+				8CAB3AFC1F7F6B12009E63D3 /* libdlib.19.7.99.dylib in Frameworks */,
+				8CAB3AFB1F7F6AE7009E63D3 /* libopencv_imgproc.3.3.0.dylib in Frameworks */,
+				8CAB3AF81F7F6AE6009E63D3 /* libopencv_core.3.3.0.dylib in Frameworks */,
+				8CAB3AF91F7F6AE6009E63D3 /* libopencv_highgui.3.3.0.dylib in Frameworks */,
 				8C483E981F6E81DC00897F1E /* libMien58.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +126,8 @@
 		8CE92B671F6D7BB000913863 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CAB3AFA1F7F6AE7009E63D3 /* libopencv_imgproc.3.3.0.dylib */,
+				8CAB3AF11F7F2D57009E63D3 /* libwdlib.dylib */,
 				8CBCBC591F7D1DE300A598DE /* libopencv_core.3.3.0.dylib */,
 				8CBCBC571F7D1D8900A598DE /* libopencv_videoio.3.3.0.dylib */,
 				8CBCBC551F7D1D0600A598DE /* libopencv_highgui.3.3.0.dylib */,
@@ -223,9 +237,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C9AB72A1F7A402900E32BD3 /* Mien58.cpp in Sources */,
-				8C2FB75F1F795A2F000B332B /* face_detection_ex.cpp in Sources */,
-				8C2FB75E1F795A2F000B332B /* face_landmark_detection_ex.cpp in Sources */,
-				8CBCBC531F7D1C9300A598DE /* webcam_face_pose_ex.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +244,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CAB3AF61F7F6803009E63D3 /* face_detection_ex.cpp in Sources */,
+				8CAB3AF71F7F6803009E63D3 /* face_landmark_detection_ex.cpp in Sources */,
+				8CAB3AF51F7F67FB009E63D3 /* webcam_face_pose_ex.cpp in Sources */,
 				8CE92B711F6D7C0C00913863 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +277,7 @@
 		8CE92B5F1F6D747700913863 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -319,7 +333,7 @@
 		8CE92B601F6D747700913863 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -368,8 +382,8 @@
 		8CE92B731F6D7C0C00913863 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "";
-				LIBRARY_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -377,8 +391,8 @@
 		8CE92B741F6D7C0C00913863 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "";
-				LIBRARY_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -36,12 +36,15 @@
     2011.  SSE4 is the next fastest and is supported by most current machines.  
 */
 
-
+#include "Mien58.hpp"
+#include "../wdlib/wdlib/wdlib.hpp"
 #include <dlib/image_processing/frontal_face_detector.h>
 #include <dlib/gui_widgets.h>
 #include <dlib/image_io.h>
 #include <iostream>
-
+#include <opencv2/core.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/imgproc.hpp>
 using namespace dlib;
 using namespace std;
 
@@ -73,13 +76,26 @@ int main_detect(int _argc, char** _argv)
 
         frontal_face_detector detector = get_frontal_face_detector();
         image_window win;
+		Mien58 mien;
+		cv::Mat mat;
+		std::vector<cv::Rect> faces;
 
         // Loop over all the images provided on the command line.
         for (int i = 1; i < argc; ++i)
         {
             cout << "processing image " << argv[i] << endl;
-            array2d<unsigned char> img;
+//            array2d<unsigned char> img;
+			array2d<bgr_pixel> img;
             load_image(img, argv[i]);
+			wdlib::fdlib(img, mat);
+			mien.detect(mat, faces);
+			for (int i=0; i<faces.size(); ++i) {
+				cv::rectangle(mat, faces[i], cv::Scalar(0x00, 0x00, 0xF0));
+			}
+			cv::imshow("detect", mat);
+			cv::waitKey();
+			continue;
+			
             // Make the image bigger by a factor of two.  This is useful since
             // the face detector looks for faces that are about 80 by 80 pixels
             // or larger.  Therefore, if you want to find faces that are smaller
