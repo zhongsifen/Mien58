@@ -20,12 +20,15 @@ const std::string _DAT_NET(_DAT + "dlib_face_recognition_resnet_model_v1.dat");
 
 class Mien58 {
 	dlib::frontal_face_detector _detector;
+	dlib::shape_predictor _sp;
 public:
 	Mien58() {
 		_detector = dlib::get_frontal_face_detector();
+		dlib::deserialize(_DAT_SP) >> _sp;
 	}
 	
-	bool detect(cv::Mat& img, std::vector<cv::Rect>& face);
+	bool detect(cv::Mat& img, std::vector<cv::Rect>& faces);
+	bool landmark(cv::Mat& img, std::vector<std::pair<cv::Rect, std::vector<cv::Point>>>& ss, std::vector<dlib::full_object_detection>& shapes);
 };
 
 #endif /* Mien58_hpp */
