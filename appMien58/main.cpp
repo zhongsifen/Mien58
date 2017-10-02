@@ -16,7 +16,7 @@ int main_webcam(int _argc, char** _argv);
 int main_detect(int _argc, char** _argv);
 int main_landmark(int _argc, char** _argv);
 int main_recogn(int _argc, char** _argv);
-int main(int argc, char** argv) {
+int main_(int argc, char** argv) {
 	const char* _argv[] = {
 		"detect",
 		"/Users/zhongsifen/Work/data/cert/cert/1.jpg",
@@ -31,15 +31,13 @@ int main(int argc, char** argv) {
 	const int _argc = 9;
 	Mien58 mien;
 	cv::Mat f;
-	std::vector<cv::Rect> faces;
+	std::vector<Face> faces;
 	
 	for (int i = 1; i < _argc; ++i)
 	{
 		f = cv::imread(_argv[i]);
 		mien.detect(f, faces);
-		for (int k=0; k<faces.size(); ++k) {
-			rectangle(f, faces[k], Scalar(0x00, 0x00, 0xF0));
-		}
+
 		imshow("detect", f);
 		waitKey();
 	}
