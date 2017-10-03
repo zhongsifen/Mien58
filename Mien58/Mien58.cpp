@@ -7,10 +7,14 @@
 //
 
 #include "Mien58.hpp"
-#include "../../wdlib/wdlib/wdlib.hpp"
+#include <wdlib.hpp>
 #include <dlib/opencv.h>
-using namespace dlib;
-using namespace wdlib;
+#include <opencv2/imgproc.hpp>
+
+void showFace(cv::Mat& img, Face& face) {
+	cv::rectangle(img, face.box, cv::Scalar(0x00, 0x00, 0xF0));
+}
+
 //bool
 //Mien58::detect(cv::Mat &img, std::vector<cv::Rect> &faces) {
 //	cv_image<bgr_pixel> cimg(img);
@@ -21,16 +25,23 @@ using namespace wdlib;
 //	return true;
 //}
 
+Mien58::Mien58() {
+	_fd = dlib::get_frontal_face_detector();
+//	dlib::deserialize(_DAT_SP) >> _sp;
+}
+
 bool
-Mien58::detect(cv::Mat & img, std::vector<Face> &faces) {
-//	std::vector<std::pair<double, dlib::rectangle>> dets;
-	std::vector<dlib::rectangle> dets;
-	dets = _fd(img);
+Mien58::detect(cv::Mat & cvmat, std::vector<Face> &faces) {
+	std::vector<std::pair<double, dlib::rectangle>> dets;
+//	std::vector<dlib::rectangle> dets;
+	dlib::cv_image<dlib::bgr_pixel> dlimg(cvmat);
+//	dets = _fd(dlimg);
+	_fd(dlimg, dets);
 	
 	int n = (int)dets.size();		if (n < 1) return false;
 	faces.resize(n);
 	for (int i=0; i<n; i++) {
-		fdlib(dets[i], faces[i].box);
+		wdlib::fdlib(dets[i].second, faces[i].box);
 //		miens[i].weight = dets[i].first;
 //		dlib::full_object_detection* fo = &dets[i].second;
 //		fdlib(fo->get_rect(), miens[i].box);
@@ -44,5 +55,3 @@ Mien58::detect(cv::Mat & img, std::vector<Face> &faces) {
 	
 	return true;
 }
-
-//full_object_detection shape = sp(img, dets[j]);

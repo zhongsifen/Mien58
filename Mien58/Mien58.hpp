@@ -9,9 +9,10 @@
 #ifndef Mien58_hpp
 #define Mien58_hpp
 
-#include <opencv2/core.hpp>
-#include <dlib/image_processing.h>
 #include <dlib/image_processing/frontal_face_detector.h>
+#include <dlib/image_processing/render_face_detections.h>
+#include <dlib/image_processing.h>
+#include <opencv2/core.hpp>
 #include <string>
 
 const std::string _DAT("/Users/zhongsifen/Work/dlib/data/");
@@ -26,14 +27,13 @@ typedef struct {
 }
 Face;
 
+void showFace(cv::Mat& img, Face& face);
+
 class Mien58 {
 	dlib::frontal_face_detector _fd;
-	dlib::shape_predictor _sp;
+//	dlib::shape_predictor _sp;
 public:
-	Mien58() {
-		_fd = dlib::get_frontal_face_detector();
-		dlib::deserialize(_DAT_SP) >> _sp;
-	}
+	Mien58();
 	
 	bool detect(cv::Mat& img, std::vector<Face>& faces);
 //	bool detect(cv::Mat& img, std::vector<cv::Rect>& faces);
