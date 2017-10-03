@@ -12,6 +12,31 @@
 #include <opencv2/imgcodecs.hpp>
 using namespace cv;
 
+const char* _filename[] = {
+"2017-09-29-14-27-45-1.jpeg",
+"2017-09-29-14-28-12-2.jpeg",
+"2017-09-29-14-28-40-3.jpeg",
+"2017-09-29-14-28-46-4.jpeg",
+"2017-09-29-14-28-57-5.jpeg",
+"2017-09-29-14-28-59-6.jpeg",
+"2017-09-29-14-29-13-7.jpeg",
+"2017-09-29-14-29-14-8.jpeg",
+"2017-09-29-14-29-15-9.jpeg",
+"2017-09-29-14-29-17-10.jpeg",
+"2017-09-29-14-29-37-11.jpeg",
+"2017-09-29-14-29-39-12.jpeg",
+"2017-09-29-14-29-40-13.jpeg",
+"2017-09-29-14-29-40-14.jpeg",
+"2017-09-29-14-29-41-15.jpeg",
+"2017-09-29-14-29-41-16.jpeg",
+"2017-09-29-14-29-41-17.jpeg",
+"2017-09-29-14-29-42-18.jpeg",
+"2017-09-29-14-29-42-19.jpeg",
+"2017-09-29-14-29-42-20.jpeg",
+};
+const std::string _folder("/Users/zhongsifen/Work/Mien58/data/0928_pic/");
+const int _ndata = 20;
+
 int main_webcam(int _argc, char** _argv);
 int main_detect(int _argc, char** _argv);
 int main_landmark(int _argc, char** _argv);
@@ -33,9 +58,9 @@ int main(int argc, char** argv) {
 	cv::Mat f;
 	std::vector<Face> faces;
 	
-	for (int i = 1; i < _argc; ++i)
+	for (int i = 0; i < _ndata; ++i)
 	{
-		f = cv::imread(_argv[i]);
+		f = cv::imread(_folder + _filename[i]);
 		mien.detect(f, faces);
 		int n = faces.size();
 		for (int k=0; k<n; ++k) {
