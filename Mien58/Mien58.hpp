@@ -23,6 +23,10 @@ typedef struct {
 	double weight;
 	cv::Rect box;
 	std::vector<cv::Point> parts;
+	
+	cv::Point eyeR;
+	cv::Point eyeL;
+	cv::Point nose;
 }
 Face;
 

@@ -7,6 +7,7 @@
 //
 
 #include "Mien58.hpp"
+#include "MienProc.hpp"
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/imgcodecs.hpp>
@@ -42,31 +43,23 @@ int main_detect(int _argc, char** _argv);
 int main_landmark(int _argc, char** _argv);
 int main_recogn(int _argc, char** _argv);
 int main(int argc, char** argv) {
-	const char* _argv[] = {
-		"detect",
-		"/Users/zhongsifen/Work/data/cert/cert/1.jpg",
-		"/Users/zhongsifen/Work/data/cert/cert/2.jpg",
-		"/Users/zhongsifen/Work/data/cert/cert/3.jpg",
-		"/Users/zhongsifen/Work/data/cert/cert/4.jpg",
-		"/Users/zhongsifen/Work/data/cert/cert/5.jpg",
-		"/Users/zhongsifen/Work/data/cert/cert/6.jpg",
-		"/Users/zhongsifen/Work/data/cert/cert/7.jpg",
-		"/Users/zhongsifen/Work/data/cert/cert/8.jpg",
-	};
 	const int _argc = 9;
 	Mien58 mien;
-	cv::Mat f;
+	cv::Mat f, h;
 	std::vector<Face> faces;
 	
+	printf("sizeof = %d\n", sizeof(_filename)/sizeof(char*));
 	for (int i = 0; i < _ndata; ++i)
 	{
 		f = cv::imread(_folder + _filename[i]);
 		mien.detect(f, faces);
 		int n = faces.size();
 		for (int k=0; k<n; ++k) {
+			align(f, faces[0].eyeL, faces[0].eyeR, h);
 			showFace(f, faces[k]);
 		}
 		imshow("detect", f);
+		imshow("aligh", h);
 		waitKey();
 	}
 	
