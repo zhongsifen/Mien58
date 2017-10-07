@@ -13,6 +13,8 @@
 #include <dlib/image_processing/render_face_detections.h>
 #include <dlib/image_processing.h>
 #include <opencv2/core.hpp>
+#include <opencv2/core/utility.hpp>
+#include <opencv2/face.hpp>
 #include <string>
 
 const std::string _MODELDAT("/Users/zhongsifen/Work/Mien58/model/");
@@ -35,6 +37,8 @@ void showFace(cv::Mat& img, Face& face);
 class Mien58 {
 	dlib::frontal_face_detector _fd;
 	dlib::shape_predictor _sp;
+	cv::Ptr<cv::face::EigenFaceRecognizer> _recogn;
+
 public:
 	Mien58();
 	

@@ -28,6 +28,7 @@ void showFace(cv::Mat& img, Face& face) {
 Mien58::Mien58() {
 	_fd = dlib::get_frontal_face_detector();
 	dlib::deserialize(_DAT_SP) >> _sp;
+	_recogn = cv::face::EigenFaceRecognizer::create();
 }
 
 bool

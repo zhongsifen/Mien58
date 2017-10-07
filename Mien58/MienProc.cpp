@@ -32,7 +32,7 @@ void getSimTransform(const Point2f pt_src[], const Point2f pt_dst[], Matx23d& af
 }
 
 bool
-align(cv::Mat& f, cv::Point& eyeL, cv::Point& eyeR, cv::Mat& h) {
+MienProc::align(cv::Mat& f, cv::Point& eyeL, cv::Point& eyeR, cv::Mat& h) {
 	const Point2f pt_src[2] = { Point2f(eyeL), Point2f(eyeR)};
 	const Point2f pt_dst[2] = { Point2f(_eyeL), Point2f(_eyeR)};
 	Matx23d aff;
