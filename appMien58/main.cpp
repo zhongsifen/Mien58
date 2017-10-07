@@ -7,7 +7,7 @@
 //
 
 #include "Mien58.hpp"
-#include "MienProc.hpp"
+#include "Mien.hpp"
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/imgcodecs.hpp>
@@ -25,21 +25,22 @@ int main(int argc, char** argv) {
 	const int sizeofdata = sizeof(MienData::cert)/sizeof(char*);
 	std::string folder(data[0]);
 
-	Mien58 mien;
+	Mien mien;
 	cv::Mat f, h;
-	std::vector<Face> faces;
+	std::vector<Landmark> faces;
 	
 	for (int i = 1; i < sizeofdata; ++i)
 	{
 		f = cv::imread(folder + data[i]);
 		mien.detect(f, faces);
-		int n = faces.size();
+		int n = (int)faces.size();
 		for (int k=0; k<n; ++k) {
-			MienProc::align(f, faces[0].eyeL, faces[0].eyeR, h);
+			mien.align(f, faces[k], h);
+			mien.showLandmark(f, faces[k]);
 		}
 		imshow("detect", f);
 		imshow("aligh", h);
-		imwrite(folder + "cert_" + std::to_string(i) + ".png", h);
+//		imwrite(folder + "cert_" + std::to_string(i) + ".png", h);
 		waitKey();
 	}
 	

@@ -10,8 +10,8 @@
 		8C0940211F82A240004C929A /* libMien58.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C483E911F6E77C800897F1E /* libMien58.dylib */; };
 		8C0940231F82A26F004C929A /* libdlib.19.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0940221F82A26F004C929A /* libdlib.19.4.0.dylib */; };
 		8C0940241F82A8D2004C929A /* libopencv_imgproc.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAB3AFA1F7F6AE7009E63D3 /* libopencv_imgproc.3.3.0.dylib */; };
-		8C0940271F84899E004C929A /* MienProc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C0940251F84899E004C929A /* MienProc.cpp */; };
-		8C0940281F84899E004C929A /* MienProc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8C0940261F84899E004C929A /* MienProc.hpp */; };
+		8C0940271F84899E004C929A /* Mien.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C0940251F84899E004C929A /* Mien.cpp */; };
+		8C0940281F84899E004C929A /* Mien.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8C0940261F84899E004C929A /* Mien.hpp */; };
 		8C5858481F82974300D822BF /* libdlib.19.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5858491F82974300D822BF /* libdlib.19.4.0.dylib */; };
 		8C58584B1F82977100D822BF /* libLAPACK.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C58584A1F82977100D822BF /* libLAPACK.dylib */; };
 		8C9AB72A1F7A402900E32BD3 /* Mien58.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C9AB7281F7A402900E32BD3 /* Mien58.cpp */; };
@@ -25,8 +25,7 @@
 		8CBCBC5A1F7D1DE300A598DE /* libopencv_core.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBCBC591F7D1DE300A598DE /* libopencv_core.3.3.0.dylib */; };
 		8CDA374E1F7FDEFA003EEDED /* libopencv_imgcodecs.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDA374D1F7FDEFA003EEDED /* libopencv_imgcodecs.3.3.0.dylib */; };
 		8CE92B711F6D7C0C00913863 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CE92B701F6D7C0C00913863 /* main.cpp */; };
-		8CFAA85A1F87B34F006748CA /* MienRecogn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CFAA8581F87B34F006748CA /* MienRecogn.cpp */; };
-		8CFAA85B1F87B34F006748CA /* MienRecogn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8CFAA8591F87B34F006748CA /* MienRecogn.hpp */; };
+		8CFB36061F88C6DA0002C2BE /* libopencv_face.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFB36071F88C6DA0002C2BE /* libopencv_face.3.3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,8 +42,8 @@
 
 /* Begin PBXFileReference section */
 		8C0940221F82A26F004C929A /* libdlib.19.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdlib.19.4.0.dylib; path = ../../lib/libdlib.19.4.0.dylib; sourceTree = "<group>"; };
-		8C0940251F84899E004C929A /* MienProc.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MienProc.cpp; sourceTree = "<group>"; };
-		8C0940261F84899E004C929A /* MienProc.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MienProc.hpp; sourceTree = "<group>"; };
+		8C0940251F84899E004C929A /* Mien.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mien.cpp; sourceTree = "<group>"; };
+		8C0940261F84899E004C929A /* Mien.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Mien.hpp; sourceTree = "<group>"; };
 		8C0940291F853860004C929A /* data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = data.cpp; sourceTree = "<group>"; };
 		8C483E911F6E77C800897F1E /* libMien58.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libMien58.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C483E961F6E784100897F1E /* libdlib.19.4.99.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdlib.19.4.99.dylib; path = "../../Library/Developer/Xcode/DerivedData/Work-epbhlotwgnuranenxjltsehfharg/Build/Products/Debug/libdlib.19.4.99.dylib"; sourceTree = "<group>"; };
@@ -62,8 +61,7 @@
 		8CE92B6E1F6D7C0C00913863 /* appMien58 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = appMien58; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CE92B701F6D7C0C00913863 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8CF23D4B1F796EA900DFD5FB /* libdlib.19.7.99.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libdlib.19.7.99.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CFAA8581F87B34F006748CA /* MienRecogn.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MienRecogn.cpp; sourceTree = "<group>"; };
-		8CFAA8591F87B34F006748CA /* MienRecogn.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MienRecogn.hpp; sourceTree = "<group>"; };
+		8CFB36071F88C6DA0002C2BE /* libopencv_face.3.3.0.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libopencv_face.3.3.0.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CFB36061F88C6DA0002C2BE /* libopencv_face.3.3.0.dylib in Frameworks */,
 				8C0940241F82A8D2004C929A /* libopencv_imgproc.3.3.0.dylib in Frameworks */,
 				8C58584B1F82977100D822BF /* libLAPACK.dylib in Frameworks */,
 				8C5858481F82974300D822BF /* libdlib.19.4.0.dylib in Frameworks */,
@@ -119,12 +118,10 @@
 		8CE92B641F6D753900913863 /* Mien58 */ = {
 			isa = PBXGroup;
 			children = (
-				8CFAA8581F87B34F006748CA /* MienRecogn.cpp */,
-				8CFAA8591F87B34F006748CA /* MienRecogn.hpp */,
 				8C9AB7281F7A402900E32BD3 /* Mien58.cpp */,
 				8C9AB7291F7A402900E32BD3 /* Mien58.hpp */,
-				8C0940251F84899E004C929A /* MienProc.cpp */,
-				8C0940261F84899E004C929A /* MienProc.hpp */,
+				8C0940251F84899E004C929A /* Mien.cpp */,
+				8C0940261F84899E004C929A /* Mien.hpp */,
 			);
 			path = Mien58;
 			sourceTree = "<group>";
@@ -132,6 +129,7 @@
 		8CE92B671F6D7BB000913863 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CFB36071F88C6DA0002C2BE /* libopencv_face.3.3.0.dylib */,
 				8C0940221F82A26F004C929A /* libdlib.19.4.0.dylib */,
 				8C58584A1F82977100D822BF /* libLAPACK.dylib */,
 				8C5858491F82974300D822BF /* libdlib.19.4.0.dylib */,
@@ -165,8 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C9AB72B1F7A402900E32BD3 /* Mien58.hpp in Headers */,
-				8CFAA85B1F87B34F006748CA /* MienRecogn.hpp in Headers */,
-				8C0940281F84899E004C929A /* MienProc.hpp in Headers */,
+				8C0940281F84899E004C929A /* Mien.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,8 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CFAA85A1F87B34F006748CA /* MienRecogn.cpp in Sources */,
-				8C0940271F84899E004C929A /* MienProc.cpp in Sources */,
+				8C0940271F84899E004C929A /* Mien.cpp in Sources */,
 				8C9AB72A1F7A402900E32BD3 /* Mien58.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
