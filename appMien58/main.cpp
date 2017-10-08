@@ -15,32 +15,27 @@ using namespace cv;
 
 #include "data.cpp"
 
-int main_webcam(int _argc, char** _argv);
-int main_detect(int _argc, char** _argv);
-int main_landmark(int _argc, char** _argv);
-int main_recogn(int _argc, char** _argv);
-
 int main(int argc, char** argv) {
 	const char** data = MienData::cert;
 	const int sizeofdata = sizeof(MienData::cert)/sizeof(char*);
 	std::string folder(data[0]);
 
-	Mien mien;
-	cv::Mat f, h;
-	std::vector<Landmark> faces;
-	
+	std::vector<Mat> cards, labels;
+	cards.resize(sizeofdata-1);
+	labels.resize(sizeofdata-1);
 	for (int i = 1; i < sizeofdata; ++i)
 	{
-		f = cv::imread(folder + data[i]);
-		mien.detect(f, faces);
-		int n = (int)faces.size();
-		for (int k=0; k<n; ++k) {
-			mien.align(f, faces[k], h);
-			mien.showLandmark(f, faces[k]);
-		}
-		imshow("detect", f);
-		imshow("aligh", h);
-//		imwrite(folder + "cert_" + std::to_string(i) + ".png", h);
+		cards[i-1] = cv::imread(folder + data[i]);
+	}
+
+	Mien mien;
+	Mien58::setup(mien);
+	Mien58::runCard(mien, cards, labels);
+	for (int i = 0; i < labels.size(); ++i)
+	{
+		imshow("detect", cards[i]);
+		imshow("aligh", labels[i]);
+		imwrite(folder + "label_" + std::to_string(i+1) + ".png", labels[i]);
 		waitKey();
 	}
 	

@@ -11,18 +11,22 @@
 #include <dlib/opencv.h>
 #include <opencv2/imgproc.hpp>
 
-void showPoints(cv::Mat& img, std::vector<cv::Point>& points) {
-	for (auto p=points.begin(); p<points.end(); ++p) {
-		cv::circle(img, *p, 2, cv::Scalar(0xF0, 0xF0, 0x00));
+bool Mien58::setup(Mien &mien) {
+	
+	return true;
+}
+
+bool Mien58::runCard(Mien &mien, std::vector<cv::Mat> &cards, std::vector<cv::Mat> &labels) {
+	int n = (int)cards.size();
+	labels.resize(n);
+	for (int i=0; i<n; ++i) {
+		std::vector<Landmark> landmarks;
+		Landmark landmark;
+		mien.detect(cards[i], landmarks);
+		mien.beone(landmarks, landmark);
+		mien.align(cards[i], landmark, labels[i]);
 	}
-//	cv::line(img, points[0], points[1], cv::Scalar(0xF0, 0xF0, 0x00));
+	
+	return true;
 }
-
-void showFace(cv::Mat& img, Landmark& face) {
-	cv::rectangle(img, face.box, cv::Scalar(0x00, 0x00, 0xF0));
-	showPoints(img, face.parts);
-	cv::circle(img, face.eyeR, 2, cv::Scalar(0xF0, 0xF0, 0xF0));
-	cv::circle(img, face.eyeL, 2, cv::Scalar(0xF0, 0xF0, 0xF0));
-}
-
 

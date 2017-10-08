@@ -8,14 +8,17 @@
 
 #ifndef Mien58_hpp
 #define Mien58_hpp
-
+	
 #include "Mien.hpp"
-#include <dlib/image_processing/frontal_face_detector.h>
-#include <dlib/image_processing/render_face_detections.h>
-#include <dlib/image_processing.h>
 #include <opencv2/core.hpp>
 #include <opencv2/core/utility.hpp>
 #include <opencv2/face.hpp>
-#include <string>
+
+namespace Mien58 {
+	bool setup(Mien& mien);
+	bool runCard(Mien& mien, std::vector<cv::Mat>& cards, std::vector<cv::Mat>& labels);
+	bool saveCard(std::vector<cv::Mat>& cards, std::string path);
+	bool loadCard(std::vector<cv::Mat>& cards, std::string path);
+}
 
 #endif /* Mien58_hpp */

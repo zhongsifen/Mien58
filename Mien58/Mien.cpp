@@ -70,6 +70,13 @@ bool Mien::detect(cv::Mat & cvmat, std::vector<Landmark> &landmarks) {
 	return true;
 }
 
+bool Mien::beone(std::vector<Landmark> &landmarks, Landmark &landmark) {
+	if (landmarks.size() < 1) return false;
+	landmark = landmarks[0];
+	
+	return true;
+}
+
 bool Mien::align(cv::Mat& f, Landmark& landmark, cv::Mat& h) {
 	MienX::align(f, landmark.lrn, MienConst::_lrn, MienConst::_box, h);
 	
