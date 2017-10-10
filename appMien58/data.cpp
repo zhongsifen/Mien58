@@ -8,8 +8,11 @@
 
 namespace MienData {
 
-	const char* cert[] = {
-		"/Users/zhongsifen/Work/Mien58/data/cert/",
+	const char folder_card[] = {
+		"/Users/zhongsifen/Work/Mien58/data/card/",
+	};
+
+	const char* card[] = {
 		"1.jpg",
 		"2.jpg",
 		"3.jpg",
@@ -20,8 +23,11 @@ namespace MienData {
 		"8.jpg",
 	};
 
-	const char* _filename[] = {
+	const char folder_input[] = {
 		"/Users/zhongsifen/Work/Mien58/data/0928_pic/",
+	};
+	
+	const char* input[] = {
 		"2017-09-29-14-27-45-1.jpeg",
 		"2017-09-29-14-28-12-2.jpeg",
 		"2017-09-29-14-28-40-3.jpeg",

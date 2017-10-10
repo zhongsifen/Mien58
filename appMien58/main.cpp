@@ -16,29 +16,36 @@ using namespace cv;
 #include "data.cpp"
 
 int main(int argc, char** argv) {
-	const char** data = MienData::cert;
-	const int sizeofdata = sizeof(MienData::cert)/sizeof(char*);
-	std::string folder(data[0]);
+	const char** data_card = MienData::card;
+	const int n = sizeof(MienData::card)/sizeof(char*);
+	std::string folder_card(MienData::folder_card);
 
-	std::vector<Mat> cards, labels;
-	cards.resize(sizeofdata-1);
-	labels.resize(sizeofdata-1);
-	for (int i = 1; i < sizeofdata; ++i)
+	std::vector<Mat> imgs;
+	imgs.resize(n);
+	for (int i = 0; i < n; ++i)
 	{
-		cards[i-1] = cv::imread(folder + data[i]);
+		imgs[i] = cv::imread(folder_card + data_card[i], 0);
 	}
 
 	Mien mien;
-	Mien58::setup(mien);
-	Mien58::runCard(mien, cards, labels);
-	for (int i = 0; i < labels.size(); ++i)
-	{
-		imshow("detect", cards[i]);
-		imshow("aligh", labels[i]);
-		imwrite(folder + "label_" + std::to_string(i+1) + ".png", labels[i]);
-		waitKey();
-	}
+	Mien58::setup();
+	Mien58::setupCard(imgs);
 	
+	const char** data_input = MienData::input;
+	const int l = sizeof(MienData::input)/sizeof(char*);
+	std::string folder_input(MienData::folder_input);
+	
+	for (int i=0; i<l; ++i) {
+		Mat f = cv::imread(folder_input + data_input[i], 0);
+		int p=0;
+		double w=0;
+		Mien58::run(f, p, w);
+		Mat h = imgs[p];
+		
+		imshow("f", f);
+		imshow("h", h);
+		waitKey(10);
+	}
 //	std::cout << "Hello, World!\n";
 	
 	return 0;

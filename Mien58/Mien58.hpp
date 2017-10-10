@@ -15,8 +15,14 @@
 #include <opencv2/face.hpp>
 
 namespace Mien58 {
-	bool setup(Mien& mien);
-	bool runCard(Mien& mien, std::vector<cv::Mat>& cards, std::vector<cv::Mat>& labels);
+	Mien _mien;
+	
+	bool setup();
+	bool setupCard(std::vector<cv::Mat>& imgs);
+	bool run(cv::Mat& img, int& label, double& confidence);
+	bool run(std::vector<cv::Mat>& imgs, std::vector<int>& labels);
+	
+	bool runCard(Mien& mien, std::vector<cv::Mat>& imgs, std::vector<cv::Mat>& cards, std::vector<int>& labels);
 	bool saveCard(std::vector<cv::Mat>& cards, std::string path);
 	bool loadCard(std::vector<cv::Mat>& cards, std::string path);
 }

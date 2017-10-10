@@ -9,6 +9,7 @@
 #include "Mien.hpp"
 #include "wdlib.hpp"
 #include <opencv2/imgproc.hpp>
+
 using namespace cv;
 
 namespace MienX {
@@ -46,11 +47,13 @@ namespace MienX {
 Mien::Mien() {
 	_fd = dlib::get_frontal_face_detector();
 	dlib::deserialize(MienConst::_DAT_SP) >> _sp;
-	_recogn = cv::face::EigenFaceRecognizer::create();
+//	_recogn = cv::face::EigenFaceRecognizer::create();
+//	_recogn = cv::face::LBPHFaceRecognizer::create();
+	_recogn = cv::face::FisherFaceRecognizer::create();
 }
 
 bool Mien::detect(cv::Mat & cvmat, std::vector<Landmark> &landmarks) {
-	dlib::cv_image<dlib::bgr_pixel> dlimg(cvmat);
+	dlib::cv_image<uint8_t> dlimg(cvmat);
 	std::vector<std::pair<double, dlib::rectangle>> dets;
 	_fd(dlimg, dets);
 	
@@ -83,11 +86,25 @@ bool Mien::align(cv::Mat& f, Landmark& landmark, cv::Mat& h) {
 	return true;
 }
 
+bool Mien::train(std::vector<cv::Mat>& imgs, std::vector<int>& labels) {
+	_recogn->train(imgs, labels);
+	
+	return true;
+}
+
+bool Mien::predict(cv::Mat& img, int& label, double& confidence) {
+	label = _recogn->predict(img);
+//	_recogn->predict(img, label, confidence);
+	
+	return true;
+}
+
 void Mien::showLandmark(cv::Mat& img, Landmark& landmark) {
 	cv::rectangle(img, landmark.box, cv::Scalar(0x00, 0x00, 0xF0));
 	for (auto p=landmark.lrn.begin(); p<landmark.lrn.end(); ++p) {
 		cv::circle(img, *p, 2, cv::Scalar(0xF0, 0xF0, 0xF0));
 	}
 }
+
 
 

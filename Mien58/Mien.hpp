@@ -38,14 +38,18 @@ public:
 class Mien {
 	dlib::frontal_face_detector _fd;
 	dlib::shape_predictor _sp;
-	cv::Ptr<cv::face::EigenFaceRecognizer> _recogn;
-	
+//	cv::Ptr<cv::face::EigenFaceRecognizer> _recogn;
+//	cv::Ptr<cv::face::LBPHFaceRecognizer> _recogn;
+	cv::Ptr<cv::face::FisherFaceRecognizer> _recogn;
 public:
 	Mien();
 	
 	bool detect(cv::Mat& img, std::vector<Landmark>& landmarks);
 	bool beone(std::vector<Landmark>& landmarks, Landmark& landmark);
 	bool align(cv::Mat& f, Landmark& landmark, cv::Mat& h);
+	bool train(std::vector<cv::Mat>& imgs, std::vector<int>& labels);
+	bool predict(cv::Mat& img, int& label, double& confidence);
+	
 	void showLandmark(cv::Mat& img, Landmark& landmark);
 };
 
