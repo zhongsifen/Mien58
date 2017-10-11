@@ -13,9 +13,12 @@
 #include <opencv2/imgcodecs.hpp>
 using namespace cv;
 
-#include "data.cpp"
+//#include "data.cpp"
 
+int main_recogn(int _argc, char** _argv);
 int main(int argc, char** argv) {
+	return main_recogn(argc, argv);
+#if 0
 	const char** data_card = MienData::card;
 	const int n = sizeof(MienData::card)/sizeof(char*);
 	std::string folder_card(MienData::folder_card);
@@ -47,6 +50,6 @@ int main(int argc, char** argv) {
 		waitKey(10);
 	}
 //	std::cout << "Hello, World!\n";
-	
+#endif
 	return 0;
 }
