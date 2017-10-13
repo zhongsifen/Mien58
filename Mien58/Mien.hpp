@@ -9,9 +9,11 @@
 #ifndef Mien_hpp
 #define Mien_hpp
 
+#include "MienNet.hpp"
 #include <dlib/image_processing/frontal_face_detector.h>
 #include <dlib/image_processing/render_face_detections.h>
 #include <dlib/image_processing.h>
+#include <dlib/dnn.h>
 #include <opencv2/core.hpp>
 #include <opencv2/face.hpp>
 
@@ -34,10 +36,11 @@ public:
 	cv::Rect box;
 	std::vector<cv::Point2f> lrn;
 };
-
 class Mien {
 	dlib::frontal_face_detector _fd;
 	dlib::shape_predictor _sp;
+	anet_type _net;
+
 //	cv::Ptr<cv::face::EigenFaceRecognizer> _recogn;
 //	cv::Ptr<cv::face::LBPHFaceRecognizer> _recogn;
 	cv::Ptr<cv::face::FisherFaceRecognizer> _recogn;
@@ -51,6 +54,8 @@ public:
 	bool predict(cv::Mat& img, int& label, double& confidence);
 	
 	void showLandmark(cv::Mat& img, Landmark& landmark);
+	
+	bool descr(cv::Mat& img, dlib::matrix<dlib::rgb_pixel>& chip, dlib::matrix<float,0,1>& descr);
 };
 
 #endif /* Mien_hpp */

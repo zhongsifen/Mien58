@@ -10,7 +10,7 @@
 		8C0940211F82A240004C929A /* libMien58.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C483E911F6E77C800897F1E /* libMien58.dylib */; };
 		8C0940231F82A26F004C929A /* libdlib.19.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0940221F82A26F004C929A /* libdlib.19.4.0.dylib */; };
 		8C0940241F82A8D2004C929A /* libopencv_imgproc.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAB3AFA1F7F6AE7009E63D3 /* libopencv_imgproc.3.3.0.dylib */; };
-		8C0940271F84899E004C929A /* Mien.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C0940251F84899E004C929A /* Mien.cpp */; };
+		8C0940271F84899E004C929A /* MienX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C0940251F84899E004C929A /* MienX.cpp */; };
 		8C0940281F84899E004C929A /* Mien.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8C0940261F84899E004C929A /* Mien.hpp */; };
 		8C11E8401F8BA58800315AB1 /* dnn_face_recognition_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C11E83E1F8BA35600315AB1 /* dnn_face_recognition_ex.cpp */; };
 		8C58584B1F82977100D822BF /* libLAPACK.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C58584A1F82977100D822BF /* libLAPACK.dylib */; };
@@ -22,6 +22,7 @@
 		8CAB3AF91F7F6AE6009E63D3 /* libopencv_highgui.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBCBC551F7D1D0600A598DE /* libopencv_highgui.3.3.0.dylib */; };
 		8CAB3AFB1F7F6AE7009E63D3 /* libopencv_imgproc.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAB3AFA1F7F6AE7009E63D3 /* libopencv_imgproc.3.3.0.dylib */; };
 		8CAB3AFE1F7F6BFA009E63D3 /* libopencv_videoio.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBCBC571F7D1D8900A598DE /* libopencv_videoio.3.3.0.dylib */; };
+		8CBB8DA41F8F1531001FC0C9 /* Mien.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CBB8DA31F8F1531001FC0C9 /* Mien.cpp */; };
 		8CBCBC561F7D1D0600A598DE /* libopencv_highgui.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBCBC551F7D1D0600A598DE /* libopencv_highgui.3.3.0.dylib */; };
 		8CBCBC581F7D1D8900A598DE /* libopencv_videoio.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBCBC571F7D1D8900A598DE /* libopencv_videoio.3.3.0.dylib */; };
 		8CBCBC5A1F7D1DE300A598DE /* libopencv_core.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBCBC591F7D1DE300A598DE /* libopencv_core.3.3.0.dylib */; };
@@ -44,7 +45,7 @@
 
 /* Begin PBXFileReference section */
 		8C0940221F82A26F004C929A /* libdlib.19.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdlib.19.4.0.dylib; path = ../../lib/libdlib.19.4.0.dylib; sourceTree = "<group>"; };
-		8C0940251F84899E004C929A /* Mien.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mien.cpp; sourceTree = "<group>"; };
+		8C0940251F84899E004C929A /* MienX.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MienX.cpp; sourceTree = "<group>"; };
 		8C0940261F84899E004C929A /* Mien.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Mien.hpp; sourceTree = "<group>"; };
 		8C0940291F853860004C929A /* data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = data.cpp; sourceTree = "<group>"; };
 		8C11E83E1F8BA35600315AB1 /* dnn_face_recognition_ex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dnn_face_recognition_ex.cpp; path = Mien58/dnn_face_recognition_ex.cpp; sourceTree = SOURCE_ROOT; };
@@ -57,6 +58,8 @@
 		8C9AB7291F7A402900E32BD3 /* Mien58.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Mien58.hpp; sourceTree = "<group>"; };
 		8CAB3AF11F7F2D57009E63D3 /* libwdlib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwdlib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAB3AFA1F7F6AE7009E63D3 /* libopencv_imgproc.3.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.3.3.0.dylib; path = ../../lib/libopencv_imgproc.3.3.0.dylib; sourceTree = "<group>"; };
+		8CBB8DA31F8F1531001FC0C9 /* Mien.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mien.cpp; sourceTree = "<group>"; };
+		8CBB8DA51F8F58C8001FC0C9 /* MienNet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MienNet.hpp; sourceTree = "<group>"; };
 		8CBCBC511F7D1C7200A598DE /* libdlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libdlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CBCBC551F7D1D0600A598DE /* libopencv_highgui.3.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.3.3.0.dylib; path = ../../lib/libopencv_highgui.3.3.0.dylib; sourceTree = "<group>"; };
 		8CBCBC571F7D1D8900A598DE /* libopencv_videoio.3.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_videoio.3.3.0.dylib; path = ../../lib/libopencv_videoio.3.3.0.dylib; sourceTree = "<group>"; };
@@ -123,9 +126,11 @@
 		8CE92B641F6D753900913863 /* Mien58 */ = {
 			isa = PBXGroup;
 			children = (
+				8CBB8DA51F8F58C8001FC0C9 /* MienNet.hpp */,
 				8C9AB7281F7A402900E32BD3 /* Mien58.cpp */,
 				8C9AB7291F7A402900E32BD3 /* Mien58.hpp */,
-				8C0940251F84899E004C929A /* Mien.cpp */,
+				8C0940251F84899E004C929A /* MienX.cpp */,
+				8CBB8DA31F8F1531001FC0C9 /* Mien.cpp */,
 				8C0940261F84899E004C929A /* Mien.hpp */,
 				8C11E83E1F8BA35600315AB1 /* dnn_face_recognition_ex.cpp */,
 			);
@@ -254,7 +259,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C11E8401F8BA58800315AB1 /* dnn_face_recognition_ex.cpp in Sources */,
-				8C0940271F84899E004C929A /* Mien.cpp in Sources */,
+				8C0940271F84899E004C929A /* MienX.cpp in Sources */,
+				8CBB8DA41F8F1531001FC0C9 /* Mien.cpp in Sources */,
 				8C9AB72A1F7A402900E32BD3 /* Mien58.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
