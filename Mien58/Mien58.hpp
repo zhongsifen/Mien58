@@ -20,14 +20,6 @@ class Mien58 {
 	std::vector<dlib::matrix<float, 0, 1>> _descrs;
 public:
 	bool setup();
-//	bool setupCard(std::vector<cv::Mat>& imgs);
-//	bool run(cv::Mat& img, int& label, double& confidence);
-//	bool run(std::vector<cv::Mat>& imgs, std::vector<int>& labels);
-//	
-//	bool runCard(Mien& mien, std::vector<cv::Mat>& imgs, std::vector<cv::Mat>& cards, std::vector<int>& labels);
-//	bool saveCard(std::vector<cv::Mat>& cards, std::string path);
-//	bool loadCard(std::vector<cv::Mat>& cards, std::string path);
-	
 	bool setupCard(cv::Mat& img);
 	bool setupCard(std::vector<cv::Mat>& imgs);
 	bool run(cv::Mat& img, int& id);
