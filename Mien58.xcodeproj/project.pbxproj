@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8C0940211F82A240004C929A /* libMien58.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C483E911F6E77C800897F1E /* libMien58.dylib */; };
-		8C0940231F82A26F004C929A /* libdlib.19.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0940221F82A26F004C929A /* libdlib.19.4.0.dylib */; };
 		8C0940241F82A8D2004C929A /* libopencv_imgproc.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAB3AFA1F7F6AE7009E63D3 /* libopencv_imgproc.3.3.0.dylib */; };
 		8C0940271F84899E004C929A /* MienX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C0940251F84899E004C929A /* MienX.cpp */; };
 		8C0940281F84899E004C929A /* Mien.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8C0940261F84899E004C929A /* Mien.hpp */; };
 		8C58584B1F82977100D822BF /* libLAPACK.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C58584A1F82977100D822BF /* libLAPACK.dylib */; };
+		8C74E9511F95F4FD00216F2D /* libdlib.19.7.99.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C74E9501F95F4FD00216F2D /* libdlib.19.7.99.dylib */; };
 		8C9990901F8CB4A500D22695 /* libdlib.19.7.99.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF23D4B1F796EA900DFD5FB /* libdlib.19.7.99.dylib */; };
 		8C9990921F8CB52500D22695 /* libcblas.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9990911F8CB52500D22695 /* libcblas.tbd */; };
 		8C9AB72A1F7A402900E32BD3 /* Mien58.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C9AB7281F7A402900E32BD3 /* Mien58.cpp */; };
@@ -51,6 +51,7 @@
 		8C483E961F6E784100897F1E /* libdlib.19.4.99.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdlib.19.4.99.dylib; path = "../../Library/Developer/Xcode/DerivedData/Work-epbhlotwgnuranenxjltsehfharg/Build/Products/Debug/libdlib.19.4.99.dylib"; sourceTree = "<group>"; };
 		8C5858491F82974300D822BF /* libdlib.19.4.0.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libdlib.19.4.0.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C58584A1F82977100D822BF /* libLAPACK.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libLAPACK.dylib; path = ../../../../System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib; sourceTree = "<group>"; };
+		8C74E9501F95F4FD00216F2D /* libdlib.19.7.99.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdlib.19.7.99.dylib; path = ../../local/lib/libdlib.19.7.99.dylib; sourceTree = "<group>"; };
 		8C9990911F8CB52500D22695 /* libcblas.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcblas.tbd; path = usr/lib/libcblas.tbd; sourceTree = SDKROOT; };
 		8C9AB7281F7A402900E32BD3 /* Mien58.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mien58.cpp; sourceTree = "<group>"; };
 		8C9AB7291F7A402900E32BD3 /* Mien58.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Mien58.hpp; sourceTree = "<group>"; };
@@ -89,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C0940231F82A26F004C929A /* libdlib.19.4.0.dylib in Frameworks */,
+				8C74E9511F95F4FD00216F2D /* libdlib.19.7.99.dylib in Frameworks */,
 				8C0940211F82A240004C929A /* libMien58.dylib in Frameworks */,
 				8CDA374E1F7FDEFA003EEDED /* libopencv_imgcodecs.3.3.0.dylib in Frameworks */,
 				8CAB3AFE1F7F6BFA009E63D3 /* libopencv_videoio.3.3.0.dylib in Frameworks */,
@@ -137,6 +138,7 @@
 		8CE92B671F6D7BB000913863 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C74E9501F95F4FD00216F2D /* libdlib.19.7.99.dylib */,
 				8C9990911F8CB52500D22695 /* libcblas.tbd */,
 				8CFB36071F88C6DA0002C2BE /* libopencv_face.3.3.0.dylib */,
 				8C0940221F82A26F004C929A /* libdlib.19.4.0.dylib */,

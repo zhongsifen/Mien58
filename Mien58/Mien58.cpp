@@ -41,7 +41,7 @@ bool Mien58::setupCard(std::vector<cv::Mat> &imgs) {
 bool Mien58::run(cv::Mat &img, int& id) {
 	dlib::matrix<rgb_pixel> chip;
 	dlib::matrix<float, 0, 1> descr;
-	_mien.descr(img, chip, descr);
+	bool ret = _mien.descr(img, chip, descr);	if (!ret) return false;
 	double score = 100;
 	int index = id = -1;
 	int n = (int)_descrs.size();

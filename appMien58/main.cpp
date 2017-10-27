@@ -31,15 +31,19 @@ int main(int argc, char** argv) {
 	}
 	m58.setupCard(imgs);
 
-	const char** data_input = MienData::input;
-	const int l = sizeof(MienData::input)/sizeof(char*);
-	std::string folder_input(MienData::folder_input);
+//	const char** data_input = MienData::input;
+//	const int l = sizeof(MienData::input)/sizeof(char*);
+//	std::string folder_input(MienData::folder_input);
+	const char** data_input = MienData::mike;
+	const int l = sizeof(MienData::mike)/sizeof(char*);
+	std::string folder_input(MienData::folder_mike);
 	
 	for (int i=0; i<l; ++i) {
 		Mat f = cv::imread(folder_input + data_input[i]);
 		int p=-1;
 		double w=0;
 		m58.run(f, p);
+		std::cout << p << std::endl;
 		
 //		imshow("f", f);
 //		imshow("h", h);

@@ -27,6 +27,7 @@ bool Mien::descr(cv::Mat& cvimg, dlib::matrix<rgb_pixel>& chip, dlib::matrix<flo
 			faces.push_back(std::move(face_chip));
 		}
 	}
+	if (faces.size() < 1) return false;
 	std::vector<matrix<float,0,1>> face_descriptors = _net(faces);
 	chip = faces[0];
 	descr = face_descriptors[0];
