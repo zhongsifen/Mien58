@@ -25,11 +25,6 @@ namespace dlib_cv {
 	}
 	
 	inline
-	void tdlib(cv::Mat& cvimg, dlib::cv_image<dlib::bgr_pixel>& dlimg) {
-		dlimg = dlib::cv_image<dlib::bgr_pixel>(cvimg);
-	}
-	
-	inline
 	void fdlib(dlib::point& dlp, cv::Point& cvp) {
 		cvp.x = (int)dlp.x();
 		cvp.y = (int)dlp.y();
@@ -56,6 +51,18 @@ namespace dlib_cv {
 		for (int i=0; i<n; ++i) {
 			fdlib(dlrs[i], cvrs[i]);
 		}
+	}
+
+
+
+	inline
+	void tdlib(cv::Mat& cvimg, dlib::cv_image<dlib::rgb_pixel>& dlimg) {
+		dlimg = dlib::cv_image<dlib::rgb_pixel>(cvimg);
+	}
+
+	inline
+		void tdlib(cv::Mat& cvimg, dlib::cv_image<dlib::bgr_pixel>& dlimg) {
+		dlimg = dlib::cv_image<dlib::bgr_pixel>(cvimg);
 	}
 
 	inline

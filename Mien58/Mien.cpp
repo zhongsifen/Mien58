@@ -7,7 +7,7 @@
 //
 
 #include "Mien.hpp"
-#include <wdlib.hpp>
+#include "dlib_cv.hpp"
 
 Mien::Mien() {
 	_fd = dlib::get_frontal_face_detector();
@@ -17,7 +17,7 @@ Mien::Mien() {
 
 bool Mien::descr(cv::Mat& cvimg, dlib::matrix<rgb_pixel>& chip, dlib::matrix<float,0,1>& descr) {
 	dlib::cv_image<rgb_pixel> img;
-	wdlib::tdlib(cvimg, img);
+	dlib_cv::tdlib(cvimg, img);
 	std::vector<matrix<rgb_pixel>> faces;
 	for (auto face : _fd(img)) {
 		auto shape = _sp(img, face);
