@@ -7,7 +7,7 @@
 //
 
 #include "Mien.hpp"
-#include "wdlib.hpp"
+#include "dlib_cv.hpp"
 #include <opencv2/imgproc.hpp>
 
 using namespace cv;
@@ -54,7 +54,7 @@ bool Mien::detect(cv::Mat & cvmat, std::vector<Landmark> &landmarks) {
 	for (int i=0; i<n; i++) {
 		dlib::full_object_detection fo = _sp(dlimg,dets[i].second);
 		landmarks[i].weight = dets[i].first;
-		wdlib::fdlib(fo.get_rect(), landmarks[i].box);
+		dlib_cv::fdlib(fo.get_rect(), landmarks[i].box);
 		std::vector<cv::Point2f>* ll = &landmarks[i].lrn;
 		ll->resize(3);
 		(*ll)[0] = cv::Point2f((fo.part(0).x() + fo.part(1).x())/2, (fo.part(0).y() + fo.part(1).y())/2);
