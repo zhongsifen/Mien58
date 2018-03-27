@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dnn_face_recognition_ex.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Mien.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
