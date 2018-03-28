@@ -18,7 +18,7 @@
 #include <opencv2/face.hpp>
 
 namespace MienConst {
-	const std::string _MODELDAT("/Users/zhongsifen/Work/Mien58/model/");
+	const std::string _MODELDAT("/Users/sifen/Work/Mien58/model/");
 	const std::string _DAT_SP(_MODELDAT + "shape_predictor_5_face_landmarks.dat");
 	const std::string _DAT_NET(_MODELDAT + "dlib_face_recognition_resnet_model_v1.dat");
 	//	const cv::Point2f _eyeL(92, 42);
@@ -36,6 +36,7 @@ public:
 	cv::Rect box;
 	std::vector<cv::Point2f> lrn;
 };
+
 class Mien {
 	dlib::frontal_face_detector _fd;
 	dlib::shape_predictor _sp;

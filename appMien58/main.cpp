@@ -6,8 +6,8 @@
 //  Copyright © 2017 ___ZHONGSIFEN___. All rights reserved.
 //
 
-#include "Mien58.hpp"
-#include "Mien.hpp"
+#include "Mien58/Mien58.hpp"
+#include "Mien58/Mien.hpp"
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/imgcodecs.hpp>

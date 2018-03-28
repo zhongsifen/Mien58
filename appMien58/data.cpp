@@ -9,7 +9,7 @@
 namespace MienData {
 
 	const char folder_card[] = {
-		"/Users/zhongsifen/Work/Mien58/data/card/",
+		"C:/Users/sifen/Work/Mien58/data/card/",
 	};
 
 	const char* card[] = {
@@ -24,7 +24,7 @@ namespace MienData {
 	};
 
 	const char folder_input[] = {
-		"/Users/zhongsifen/Work/Mien58/data/0928_pic/",
+		"C:/Users/sifen/Work/Mien58/data/0928_pic/",
 	};
 	
 	const char* input[] = {
@@ -51,7 +51,7 @@ namespace MienData {
 	};
 
 	const char folder_mike[] = {
-		"/Users/zhongsifen/Work/Mien58/data/mike/",
+		"C:/Users/sifen/Work/Mien58/data/mike/",
 	};
 	
 	const char* mike[] = {
