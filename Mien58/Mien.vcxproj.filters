@@ -38,5 +38,8 @@
     <ClInclude Include="dlib_cv.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="_config.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

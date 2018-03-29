@@ -13,7 +13,7 @@
 #include <opencv2/imgcodecs.hpp>
 using namespace cv;
 
-#include "data.cpp"
+#include "data.hpp"
 
 int main_recogn(int _argc, char** _argv);
 int main(int argc, char** argv) {
