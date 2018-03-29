@@ -9,6 +9,8 @@
 #ifndef Mien_hpp
 #define Mien_hpp
 
+#include "_config.hpp"
+
 #include "MienNet.hpp"
 #include <dlib/image_processing/frontal_face_detector.h>
 #include <dlib/image_processing/render_face_detections.h>
@@ -18,12 +20,10 @@
 #include <opencv2/face.hpp>
 
 namespace MienConst {
-	const std::string _MODELDAT("/Users/sifen/Work/Mien58/model/");
+	const std::string _MODELDAT(MienConfig::_FOLDER + "model/");
 	const std::string _DAT_SP(_MODELDAT + "shape_predictor_5_face_landmarks.dat");
 	const std::string _DAT_NET(_MODELDAT + "dlib_face_recognition_resnet_model_v1.dat");
-	//	const cv::Point2f _eyeL(92, 42);
-	//	const cv::Point2f _eyeR(36, 42);
-	//	const cv::Size _box(128, 128);
+
 	const cv::Point2f _eyeL(46, 21);
 	const cv::Point2f _eyeR(18, 21);
 	const cv::Size _box(64, 64);

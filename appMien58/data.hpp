@@ -1,16 +1,19 @@
+#pragma once
+
 //
 //  data.cpp
 //  appMien58
 //
 //  Created by SIFEN ZHONG on 4/10/2017.
-//  Copyright Â© 2017 ___ZHONGSIFEN___. All rights reserved.
+//  Copyright © 2017 ___ZHONGSIFEN___. All rights reserved.
 //
 
-namespace MienData {
+#include "Mien58\_config.hpp"
 
-	const char folder_card[] = {
-		"C:/Users/sifen/Work/Mien58/data/card/",
-	};
+namespace MienData {
+	const std::string path = MienConfig::_FOLDER + "data/";
+
+	const std::string folder_card = path + "card/";
 
 	const char* card[] = {
 		"1.jpg",
@@ -23,10 +26,8 @@ namespace MienData {
 		"8.jpg",
 	};
 
-	const char folder_input[] = {
-		"C:/Users/sifen/Work/Mien58/data/0928_pic/",
-	};
-	
+	const std::string folder_input = path + "0928_pic/";
+
 	const char* input[] = {
 		"2017-09-29-14-27-45-1.jpeg",
 		"2017-09-29-14-28-12-2.jpeg",
@@ -50,20 +51,18 @@ namespace MienData {
 		"2017-09-29-14-29-42-20.jpeg",
 	};
 
-	const char folder_mike[] = {
-		"C:/Users/sifen/Work/Mien58/data/mike/",
-	};
-	
+	const std::string folder_mike = path + "mike/";
+
 	const char* mike[] = {
-	"132229197802080070.jpg",
-	"201708211446320322.jpg",
-	"201708211446340091.jpg",
-	"201708211446350930.jpg",
-	"201708211446370736.jpg",
-	"201708211446390489.jpg",
-	"201708211446530248.jpg",
-	"201708211515170364.jpg",
-	"201708211515230212.jpg",
+		"132229197802080070.jpg",
+		"201708211446320322.jpg",
+		"201708211446340091.jpg",
+		"201708211446350930.jpg",
+		"201708211446370736.jpg",
+		"201708211446390489.jpg",
+		"201708211446530248.jpg",
+		"201708211515170364.jpg",
+		"201708211515230212.jpg",
 	};
 
 }
