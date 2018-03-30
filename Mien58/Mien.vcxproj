@@ -16,11 +16,11 @@
     <ClCompile Include="MienX.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Mien58_config.hpp" />
     <ClInclude Include="Mien.hpp" />
     <ClInclude Include="Mien58.hpp" />
     <ClInclude Include="MienNet.hpp" />
     <ClInclude Include="dlib_cv.hpp" />
-    <ClInclude Include="_config.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

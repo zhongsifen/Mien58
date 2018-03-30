@@ -8,7 +8,7 @@
 //  Copyright © 2017 ___ZHONGSIFEN___. All rights reserved.
 //
 
-#include "Mien58\_config.hpp"
+#include "Mien58_config.hpp"
 
 namespace MienData {
 	const std::string path = MienConfig::_FOLDER + "data/";

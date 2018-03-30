@@ -38,7 +38,7 @@
     <ClInclude Include="dlib_cv.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="_config.hpp">
+    <ClInclude Include="..\Mien58_config.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

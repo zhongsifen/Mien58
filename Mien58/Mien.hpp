@@ -9,7 +9,7 @@
 #ifndef Mien_hpp
 #define Mien_hpp
 
-#include "_config.hpp"
+#include "Mien58_config.hpp"
 
 #include "MienNet.hpp"
 #include <dlib/image_processing/frontal_face_detector.h>
