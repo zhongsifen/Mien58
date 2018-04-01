@@ -20,8 +20,8 @@
 #include <opencv2/face.hpp>
 
 namespace MienConst {
-	const std::string _MODELDAT(MienConfig::_FOLDER + "model/");
-	const std::string _DAT_SP(_MODELDAT + "shape_predictor_5_face_landmarks.dat");
+	const std::string _MODELDAT(MienConfig::_M + "model/");
+	const std::string _DAT_SP( _MODELDAT + "shape_predictor_5_face_landmarks.dat");
 	const std::string _DAT_NET(_MODELDAT + "dlib_face_recognition_resnet_model_v1.dat");
 
 	const cv::Point2f _eyeL(46, 21);

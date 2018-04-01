@@ -11,7 +11,7 @@
 #include "Mien58_config.hpp"
 
 namespace MienData {
-	const std::string path = MienConfig::_FOLDER + "data/";
+	const std::string path = MienConfig::_D + "data/";
 
 	const std::string folder_card = path + "card/";
 
