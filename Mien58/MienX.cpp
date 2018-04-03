@@ -1,5 +1,5 @@
 //
-//  MienProc.cpp
+//  MienX.cpp
 //  Mien58
 //
 //  Created by SIFEN ZHONG on 4/10/2017.
@@ -74,19 +74,6 @@ bool Mien::beone(std::vector<Landmark> &landmarks, Landmark &landmark) {
 
 bool Mien::align(cv::Mat& f, Landmark& landmark, cv::Mat& h) {
 	MienX::align(f, landmark.lrn, MienConst::_lrn, MienConst::_box, h);
-	
-	return true;
-}
-
-bool Mien::train(std::vector<cv::Mat>& imgs, std::vector<int>& labels) {
-	_recogn->train(imgs, labels);
-	
-	return true;
-}
-
-bool Mien::predict(cv::Mat& img, int& label, double& confidence) {
-	label = _recogn->predict(img);
-//	_recogn->predict(img, label, confidence);
 	
 	return true;
 }
