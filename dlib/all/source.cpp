@@ -32,9 +32,9 @@
 #include "../sockets/sockets_kernel_1.cpp"
 #include "../bsp/bsp.cpp"
 
-#include "../dir_nav/dir_nav_kernel_1.cpp"
-#include "../dir_nav/dir_nav_kernel_2.cpp"
-#include "../dir_nav/dir_nav_extensions.cpp"
+//#include "../dir_nav/dir_nav_kernel_1.cpp"
+//#include "../dir_nav/dir_nav_kernel_2.cpp"
+//#include "../dir_nav/dir_nav_extensions.cpp"
 #include "../linker/linker_kernel_1.cpp"
 #include "../logger/extra_logger_headers.cpp"
 #include "../logger/logger_kernel_1.cpp"
@@ -86,10 +86,10 @@
 
 
 
-#include "../data_io/image_dataset_metadata.cpp"
-#include "../data_io/mnist.cpp"
-#include "../global_optimization/global_function_search.cpp"
-#include "../filtering/kalman_filter.cpp"
+//#include "../data_io/image_dataset_metadata.cpp"
+//#include "../data_io/mnist.cpp"
+//#include "../global_optimization/global_function_search.cpp"
+//#include "../filtering/kalman_filter.cpp"
 
 
 #define DLIB_ALL_SOURCE_END
