@@ -18,5 +18,13 @@
     <ClCompile Include="all\source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="test_for_odr_violations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

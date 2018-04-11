@@ -55,8 +55,8 @@ bool Mien58::run(cv::Mat &img, int& id) {
 	if (score > 0.6) return false;
 	id = index;
 	dlib::cv_image<bgr_pixel> cvimg(img);
-	dlib::image_window im(cvimg);
-	dlib::image_window ch(_chips[id]);
+	//dlib::image_window im(cvimg);
+	//dlib::image_window ch(_chips[id]);
 	dlib::sleep(1000);
 	
 	return true;

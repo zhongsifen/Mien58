@@ -11,7 +11,7 @@
 //#define DLIB_DISABLE_ASSERTS // asserts always disabled 
 
 //#define DLIB_ISO_CPP_ONLY
-//#define DLIB_NO_GUI_SUPPORT
+#define DLIB_NO_GUI_SUPPORT
 //#define DLIB_ENABLE_STACK_TRACE
 
 // You should also consider telling dlib to link against libjpeg, libpng, libgif, fftw, CUDA, 
