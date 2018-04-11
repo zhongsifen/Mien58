@@ -18,6 +18,9 @@
     <ClCompile Include="_lib.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\dlib\dlib.vcxproj">
+      <Project>{488bb479-d356-433c-944f-a8ae9b8d09b5}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Mien\Mien.vcxproj">
       <Project>{83f9c750-f2ba-41ff-8b91-0d777d2db508}</Project>
     </ProjectReference>
