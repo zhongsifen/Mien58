@@ -19,7 +19,7 @@
 #include "../md5/md5_kernel_1.cpp"
 #include "../tokenizer/tokenizer_kernel_1.cpp"
 #include "../unicode/unicode.cpp"
-//#include "../test_for_odr_violations.cpp"
+#include "../test_for_odr_violations.cpp"
 
 
 
@@ -56,7 +56,7 @@
 #include "../threads/thread_pool_extension.cpp"
 #include "../threads/async.cpp"
 #include "../timer/timer.cpp"
-#include "../stack_trace.cpp"
+//#include "../stack_trace.cpp"
 
 #ifdef DLIB_PNG_SUPPORT
 #include "../image_loader/png_loader.cpp"

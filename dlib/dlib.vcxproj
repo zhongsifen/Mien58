@@ -12,7 +12,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="all\source.cpp" />
-    <ClCompile Include="test_for_odr_violations.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="config.h" />
