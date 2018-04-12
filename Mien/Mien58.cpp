@@ -38,7 +38,7 @@ bool Mien58::setupCard(std::vector<cv::Mat> &imgs) {
 	return true;
 }
 
-bool Mien58::run(cv::Mat &img, int& id) {
+bool Mien58::run(cv::Mat &img, int &id, cv::Mat &ch) {
 	dlib::matrix<rgb_pixel> chip;
 	dlib::matrix<float, 0, 1> descr;
 	bool ret = _mien.descr(img, chip, descr);	if (!ret) return false;
@@ -54,10 +54,14 @@ bool Mien58::run(cv::Mat &img, int& id) {
 	}
 	if (score > 0.6) return false;
 	id = index;
-	dlib::cv_image<bgr_pixel> cvimg(img);
+	dlib::array2d<dlib::rgb_pixel> chip_img;
+	dlib::assign_image(chip_img, _chips[id]);
+	dlib_cv::fdlib(chip_img, ch);
+
+	//dlib::cv_image<bgr_pixel> cvimg(img);
 	//dlib::image_window im(cvimg);
 	//dlib::image_window ch(_chips[id]);
-	dlib::sleep(1000);
+	//dlib::sleep(1000);
 	
 	return true;
 }

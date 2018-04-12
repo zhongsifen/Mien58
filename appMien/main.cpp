@@ -37,17 +37,19 @@ int main(int argc, char** argv) {
 	const char** data_input = MienData::mike;
 	const int l = sizeof(MienData::mike)/sizeof(char*);
 	std::string folder_input(MienData::folder_mike);
-	
+
 	for (int i=0; i<l; ++i) {
 		Mat f = cv::imread(folder_input + data_input[i]);
+		Mat h = f;
+		imshow("h", h);
+		waitKey(1000);
 		int p=-1;
 		double w=0;
-		m58.run(f, p);
+		m58.run(f, p, h);
 		std::cout << p << std::endl;
 		
-//		imshow("f", f);
-//		imshow("h", h);
-//		waitKey(10);
+		imshow("h", h);
+		waitKey(1000);
 	}
 
 	return 0;

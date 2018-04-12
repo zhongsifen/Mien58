@@ -16,9 +16,14 @@
 namespace dlib_cv {
 	inline
 	void fdlib(dlib::array2d<dlib::bgr_pixel>& dlimg, cv::Mat& cvimg) {
-		cvimg = toMat(dlimg);
+		cvimg = dlib::toMat(dlimg);
 	}
 	
+	inline
+	void fdlib(dlib::array2d<dlib::rgb_pixel>& dlimg, cv::Mat& cvimg) {
+		cvimg = toMat(dlimg);
+	}
+
 	inline
 	void fdlib(dlib::array2d<uint8_t>& dlimg, cv::Mat& cvimg) {
 		cvimg = dlib::toMat(dlimg);

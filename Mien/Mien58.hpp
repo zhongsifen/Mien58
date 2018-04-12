@@ -22,7 +22,7 @@ public:
 	bool setup();
 	bool setupCard(cv::Mat& img);
 	bool setupCard(std::vector<cv::Mat>& imgs);
-	bool run(cv::Mat& img, int& id);
+	bool run(cv::Mat& img, int& id, cv::Mat& ch);
 };
 
 #endif /* Mien58_hpp */
