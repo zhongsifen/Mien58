@@ -12,7 +12,6 @@
 #include "Mien.hpp"
 #include <opencv2/core.hpp>
 #include <opencv2/core/utility.hpp>
-//#include <opencv2/face.hpp>
 
 class Mien58 {
 	Mien _mien;

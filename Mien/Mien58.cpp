@@ -58,10 +58,6 @@ bool Mien58::run(cv::Mat &img, int &id, cv::Mat &ch) {
 	dlib::assign_image(chip_img, _chips[id]);
 	dlib_cv::fdlib(chip_img, ch);
 
-	//dlib::cv_image<bgr_pixel> cvimg(img);
-	//dlib::image_window im(cvimg);
-	//dlib::image_window ch(_chips[id]);
-	//dlib::sleep(1000);
 	
 	return true;
 }

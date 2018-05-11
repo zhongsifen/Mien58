@@ -12,6 +12,7 @@
 #include <opencv2/core.hpp>
 #include <dlib/opencv.h>
 #include <dlib/array2d.h>
+#include <dlib/image_processing.h>
 
 namespace dlib_cv {
 	inline
@@ -21,7 +22,7 @@ namespace dlib_cv {
 	
 	inline
 	void fdlib(dlib::array2d<dlib::rgb_pixel>& dlimg, cv::Mat& cvimg) {
-		cvimg = toMat(dlimg);
+		cvimg = dlib::toMat(dlimg);
 	}
 
 	inline
@@ -58,6 +59,15 @@ namespace dlib_cv {
 		}
 	}
 
+	inline
+	void fdlib(dlib::full_object_detection& dlrp, cv::Rect& cvr, std::vector<cv::Point>& cvps) {
+		fdlib(dlrp.get_rect(), cvr);
+		int n = (int)dlrp.num_parts();		if (n < 1) return;
+		cvps.resize(n);
+		for (int i = 0; i<n; ++i) {
+			fdlib(dlrp.part(i), cvps[i]);
+		}
+	}
 
 
 	inline
@@ -90,15 +100,6 @@ namespace dlib_cv {
 		dlr.bottom() = cvr.y + cvr.height - 1;
 	}
 
-	inline
-	void fdlib(dlib::full_object_detection& dlrp, cv::Rect& cvr, std::vector<cv::Point>& cvps) {
-		fdlib(dlrp.get_rect(), cvr);
-		int n = (int)dlrp.num_parts();		if (n < 1) return;
-		cvps.resize(n);
-		for (int i=0; i<n; ++i) {
-			fdlib(dlrp.part(i), cvps[i]);
-		}
-	}
 }
 
 #endif /* dlib_cv_hpp */

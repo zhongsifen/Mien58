@@ -11,12 +11,10 @@
 
 #include "Mien_config.hpp"
 
-#include "MienNet.hpp"
-#include <dlib/image_processing/frontal_face_detector.h>
-//#include <dlib/image_processing/render_face_detections.h>
-//#include <dlib/image_processing.h>
-#include <dlib/dnn.h>
 #include <opencv2/core.hpp>
+#include <dlib/image_processing/frontal_face_detector.h>
+#include <dlib/dnn.h>
+#include "MienNet.hpp"
 
 namespace MienConst {
 	const std::string _MODELDAT(MienConfig::_M + "model/");
